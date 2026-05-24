@@ -77,49 +77,65 @@ export default function Header({ cartCount, onCartOpen, searchTerm, onSearchChan
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 z-10">
           <div className="flex h-16 sm:h-20 items-center justify-between gap-4">
             
-            {/* Logo */}
-            <a href="#accueil" className="flex items-center gap-2.5 group shrink-0">
-              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-red text-brand-gold shadow-md transition-transform duration-300 group-hover:scale-105 group-hover:rotate-12">
-                {/* Mustache simple geometric stylized design natively in JSX */}
-                <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12,14 C10.2,14 8.5,12.5 6.5,12.5 C4.5,12.5 3,13.5 2,15 C4,17 7.5,17.5 10,16.5 C11,16 11.5,15.5 12,15.5 C12.5,15.5 13,16 14,16.5 C16.5,17.5 20,17 22,15 C21,13.5 19.5,12.5 17.5,12.5 C15.5,12.5 13.8,14 12,14 Z" />
+            {/* Logo: Custom circular design mirroring the reference image's gorgeous icon */}
+            <a href="#accueil" className="flex items-center gap-3 group shrink-0 relative py-2">
+              <div className="relative h-11 w-11 flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
+                {/* SVG representing the circle outline containing a dress, an electric plug, and lipstick */}
+                <svg className="h-full w-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  {/* Outer circle contour */}
+                  <circle cx="50" cy="50" r="44" fill="none" stroke="#111827" strokeWidth="3" />
+                  
+                  {/* Left item: stylized dress (salmon-red) */}
+                  <path d="M 32,58 L 26,72 C 26,72 35,76 40,71 L 37,58 Z" fill="#D21F26" />
+                  <path d="M 30,35 C 33,35 34,39 34,42 L 32,58 L 26,58 L 26,42 C 26,39 27,35 30,35 Z" fill="#D21F26" />
+                  
+                  {/* Central item: stylized electric plug (navy/slate) */}
+                  <rect x="47" y="32" width="6" height="12" rx="1.5" fill="#111827" />
+                  <path d="M 45,44 Q 45,55 50,55 Q 55,55 55,44 Z" fill="#111827" />
+                  <line x1="50" y1="55" x2="50" y2="72" stroke="#111827" strokeWidth="2" />
+                  <line x1="48" y1="28" x2="48" y2="32" stroke="#111827" strokeWidth="2" strokeLinecap="round" />
+                  <line x1="52" y1="28" x2="52" y2="32" stroke="#111827" strokeWidth="2" strokeLinecap="round" />
+
+                  {/* Right item: lipstick (peach/gold) */}
+                  <rect x="68" y="48" width="8" height="20" rx="1" fill="#111827" stroke="#111827" strokeWidth="1" />
+                  <path d="M 69,38 L 75,34 L 75,48 L 69,48 Z" fill="#EAD2C9" stroke="#111827" strokeWidth="1" />
                 </svg>
               </div>
               <div className="flex flex-col">
-                <span className="font-display text-lg sm:text-xl font-black tracking-tight text-brand-dark leading-none">
-                  JULIO'S
+                <span className="font-display text-base font-black tracking-[0.12em] text-brand-dark leading-none">
+                  ORIGINEL SHOP
                 </span>
-                <span className="text-[10px] uppercase tracking-[0.2em] text-brand-red font-bold font-display -mt-0.5">
-                  CRISP WEAR
+                <span className="text-[7.5px] uppercase tracking-[0.25em] text-brand-red font-extrabold font-display mt-1">
+                  tout ce qui est original
                 </span>
               </div>
             </a>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-8 font-display">
+            {/* Desktop Navigation: Guess-style tracking uppercase */}
+            <nav className="hidden md:flex items-center gap-10 font-display">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-sm font-bold text-brand-dark/80 hover:text-brand-red relative py-1 after:absolute after:bottom-0 after:left-0 after:h-[2.5px] after:w-0 after:bg-brand-red after:transition-all hover:after:w-full"
+                  className="text-xs uppercase tracking-[0.2em] font-bold text-brand-dark/80 hover:text-brand-red relative py-1 after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:w-0 after:bg-brand-red after:transition-all hover:after:w-full"
                 >
                   {link.label}
                 </a>
               ))}
             </nav>
 
-            {/* Icons Bar */}
-            <div className="flex items-center gap-2 sm:gap-4 ml-auto sm:ml-0">
+            {/* Icons Bar: Sharp borders, ultra-clean */}
+            <div className="flex items-center gap-1 sm:gap-2 ml-auto sm:ml-0">
               {/* Search Toggle */}
               <div className="relative flex items-center">
                 {isSearchOpen && (
                   <input
                     id="search-input"
                     type="text"
-                    placeholder="Rechercher un drop..."
+                    placeholder="COMPULSER LA SÉLECTION..."
                     value={searchTerm}
                     onChange={(e) => onSearchChange(e.target.value)}
-                    className="w-40 sm:w-60 bg-white border border-brand-dark/10 text-sm py-1.5 pl-3 pr-8 rounded-full focus:outline-none focus:ring-1 focus:ring-brand-red focus:border-brand-red mr-2 animate-in slide-in-from-right duration-200 font-sans"
+                    className="w-40 sm:w-64 bg-white border border-brand-dark/20 text-[10px] tracking-wider uppercase py-2 pl-4 pr-10 rounded-none focus:outline-none focus:border-brand-dark mr-2 animate-in fade-in duration-300 font-sans"
                   />
                 )}
                 <button
@@ -128,10 +144,10 @@ export default function Header({ cartCount, onCartOpen, searchTerm, onSearchChan
                     setIsSearchOpen(!isSearchOpen);
                     if (isSearchOpen) onSearchChange('');
                   }}
-                  className="p-2 rounded-full hover:bg-brand-dark/5 text-brand-dark transition-colors"
+                  className="p-2.5 hover:bg-brand-dark/5 text-brand-dark transition-colors"
                   aria-label="Recherche"
                 >
-                  {isSearchOpen ? <X className="h-5 w-5" /> : <Search className="h-5 w-5" />}
+                  {isSearchOpen ? <X className="h-4.5 w-4.5" /> : <Search className="h-4.5 w-4.5" />}
                 </button>
               </div>
 
@@ -139,12 +155,12 @@ export default function Header({ cartCount, onCartOpen, searchTerm, onSearchChan
               <button
                 id="cart-trigger-btn"
                 onClick={onCartOpen}
-                className="p-2 mr-1 sm:mr-0 rounded-full hover:bg-brand-dark/5 text-brand-dark relative transition-transform active:scale-95 duration-100"
+                className="p-2.5 hover:bg-brand-dark/5 text-brand-dark relative transition-transform active:scale-95 duration-100"
                 aria-label="Voir le Panier"
               >
-                <ShoppingBag className="h-5 w-5 text-brand-dark" />
+                <ShoppingBag className="h-4.5 w-4.5 text-brand-dark" />
                 {cartCount > 0 && (
-                  <span className="absolute top-0 right-0 h-5 w-5 rounded-full bg-brand-red text-[10px] font-black text-white flex items-center justify-center ring-2 ring-brand-cream animate-bounce">
+                  <span className="absolute top-1 right-1 h-4 w-4 rounded-none bg-brand-dark text-[8.5px] font-black text-white flex items-center justify-center border border-white">
                     {cartCount}
                   </span>
                 )}
@@ -154,10 +170,10 @@ export default function Header({ cartCount, onCartOpen, searchTerm, onSearchChan
               <button
                 id="mobile-menu-toggle-btn"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="p-2 rounded-full hover:bg-brand-dark/5 text-brand-dark md:hidden"
+                className="p-2.5 hover:bg-brand-dark/5 text-brand-dark md:hidden"
                 aria-label={isMobileMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
               >
-                {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+                {isMobileMenuOpen ? <X className="h-4.5 w-4.5" /> : <Menu className="h-4.5 w-4.5" />}
               </button>
             </div>
           </div>

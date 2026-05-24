@@ -4,67 +4,67 @@ import { ArrowRight, ShieldCheck, Heart, Sparkles, ChevronLeft, ChevronRight } f
 
 const SLIDES = [
   {
-    id: "slide-original",
-    image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&q=80&w=1200",
-    title: "Le style a du goût. Portez le croustillant.",
-    subtitle: "DROP CAPSULE : RETRO CRUNCH",
-    badge: "DROP EXCLUSIF PRINTEMPS 2026",
-    highlight: "goût",
-    description: "JULIO'S réinvente la mode urbaine avec une collection streetwear premium et impertinente. Des coupes lourdes inspirées par les courbes et l'histoire de la plus célèbre des tuiles à empiler.",
-    tag: "Hoodie Julio 'Original Red'",
-    price: "89,00€",
+    id: "slide-motifs",
+    image: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&q=80&w=1200",
+    title: "Le chic géométrique. Découvrez l'inexorable.",
+    subtitle: "DROP CAPSULE : ORIGINEL RÉTRO",
+    badge: "SÉLECTION NOUVEAUTÉ DESIGN",
+    highlight: "géométrique",
+    description: "Une chemise de créateur légère à motifs géométriques vibrants, magnifiée par une palette de tons pêche et corail chauds.",
+    tag: "Chemise Fluide 'Originel Rétro'",
+    price: "49,00€",
     accentColor: "text-brand-red",
     badgeBg: "bg-brand-red/5 border-brand-red/10 text-brand-red",
     badgeIconColor: "text-brand-gold",
-    btnText: "Découvrir le Hoodie",
+    btnText: "Voir la Chemise",
     link: "#produits"
   },
   {
-    id: "slide-sour-cream",
-    image: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&q=80&w=1200",
-    title: "L'acidité rafraîchissante de Sour Cream.",
-    subtitle: "VERT RETRO PASTEL - PREMIUM SIZING",
-    badge: "FRESH DROP D'ATHLÉTISME",
-    highlight: "Sour Cream",
-    description: "Exprimez l'acidité subtile de la crème et de l'oignon avec ce t-shirt vert sour-pastel. Coupe décontractée unie avec de grandes moustaches velours brodées.",
-    tag: "T-Shirt 'Sour Cream & Onion'",
-    price: "39,00€",
-    accentColor: "text-brand-green",
-    badgeBg: "bg-brand-green/5 border-brand-green/10 text-brand-green",
-    badgeIconColor: "text-brand-gold",
-    btnText: "Voir le T-Shirt",
-    link: "#produits"
-  },
-  {
-    id: "slide-paprika",
-    image: "https://images.unsplash.com/photo-1544923246-77307dd654cb?auto=format&fit=crop&q=80&w=1200",
-    title: "Le craquement irrésistible de l'épice.",
-    subtitle: "NYLON RIPSTOP TECHNIQUE",
-    badge: "SÉRIE LIMITÉE SÉCURISÉE",
-    highlight: "craquement",
-    description: "Veste coupe-vent orange vif éblouissant entièrement imperméable. Conçue avec des membranes respirantes pour une tenue parfaite face aux éléments.",
-    tag: "Veste Technique 'Paprika Spicy'",
-    price: "135,00€",
+    id: "slide-blender",
+    image: "https://images.unsplash.com/photo-1578643463396-0997cb5328c1?auto=format&fit=crop&q=80&w=1200",
+    title: "Le goût rétro dans vos préparations saines.",
+    subtitle: "ÉLECTROMÉNAGER VINTAGE VANILLE",
+    badge: "L'ÉBÈNE DU DESIGN VINTAGE",
+    highlight: "rétro",
+    description: "Rehaussez votre cuisine avec notre blender vintage emblématique en acier brossé de couleur crème vanillée et au moteur ultra-robuste.",
+    tag: "Blender Rétro 'Originel Taste'",
+    price: "119,00€",
     accentColor: "text-brand-gold",
     badgeBg: "bg-brand-gold/10 border-brand-gold/20 text-brand-dark",
     badgeIconColor: "text-brand-red",
-    btnText: "Inspecter la Veste",
+    btnText: "Voir le Blender",
+    link: "#produits"
+  },
+  {
+    id: "slide-pad",
+    image: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&q=80&w=1200",
+    title: "L'équilibre parfait de la technologie tactile.",
+    subtitle: "MINIMALISME GRAPHITE & CLARTÉ LED",
+    badge: "TECHNOLOGIE INTUITIVE HAUT GAMME",
+    highlight: "tactile",
+    description: "Apportez une précision inégalée à vos croquis ou à vos lectures avec l'un des pads les plus fins du moment à finition graphite sombre.",
+    tag: "Originel Pad 11 + Stylet",
+    price: "429,00€",
+    accentColor: "text-blue-600",
+    badgeBg: "bg-blue-50 border-blue-200 text-blue-700",
+    badgeIconColor: "text-blue-500",
+    btnText: "Voir la Tablette",
     link: "#produits"
   },
   {
     id: "slide-cylinder",
     image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&q=80&w=1200",
-    title: "Empilez les courbes de notre maroquinerie.",
-    subtitle: "CONCEPT TUBE RIGIDE CAPSULE",
-    badge: "PIÈCE MAÎTRESSE RECHERCHÉE",
-    highlight: "Empilez",
-    description: "La pièce d'art ultime de cette capsule. Sac cylindrique rigide façonné à la main en matières éco-certifiées, parfait écho à nos boîtes collectors.",
-    tag: "Cylinder Bag 'Original Can'",
-    price: "89,00€",
+    title: "Le bicolore d'une maroquinerie d'art.",
+    subtitle: "CUIR DE VACHETTE ET BOUCLES OR",
+    badge: "ÉDITION LIMITÉE EXTRASENSORIELLE",
+    highlight: "maroquinerie",
+    description: "Une silhouette structurée unique bicolore corail orange et vert d'eau, façonnée à la main et agrémentée de détails dorés étincelants.",
+    tag: "Sacoche Cuir 'Originel Bag'",
+    price: "145,00€",
     accentColor: "text-brand-red",
     badgeBg: "bg-brand-clay/10 border-brand-clay/20 text-brand-dark",
     badgeIconColor: "text-brand-gold",
-    btnText: "S'offrir l'Écrin Bag",
+    btnText: "S'offrir le Sac",
     link: "#produits"
   }
 ];
@@ -220,21 +220,21 @@ export default function Hero() {
                   <span className="font-display font-black text-brand-red text-sm shrink-0">{currentSlide.price}</span>
                 </motion.div>
 
-                {/* Main e-commerce quick CTA triggers */}
+                {/* Main e-commerce quick CTA triggers : Guess inspired sharp rectangles with bold uppercase tracking */}
                 <motion.div 
                   variants={textVariants}
                   className="flex flex-col sm:flex-row gap-4 pt-2"
                 >
                   <a
                     href={currentSlide.link}
-                    className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-red px-8 py-4 text-sm font-bold text-white shadow-lg shadow-brand-red/10 transition-all hover:bg-brand-dark hover:-translate-y-0.5 active:translate-y-0 font-display hover:shadow-xl hover:shadow-brand-red/20 shrink-0"
+                    className="inline-flex items-center justify-center gap-2 rounded-none bg-brand-dark border-2 border-brand-dark px-8 py-4 text-xs font-bold uppercase tracking-[0.2em] text-white shadow-md transition-all hover:bg-white hover:text-brand-dark active:translate-y-0.5 font-display shrink-0"
                   >
                     {currentSlide.btnText}
                     <ArrowRight className="h-4 w-4" />
                   </a>
                   <a
                     href="#histoire"
-                    className="inline-flex items-center justify-center gap-2 rounded-full border border-brand-dark/10 bg-white/70 backdrop-blur-xs px-8 py-4 text-sm font-bold text-brand-dark hover:bg-brand-cream hover:border-brand-gold transition-all hover:-translate-y-0.5 active:translate-y-0 font-display"
+                    className="inline-flex items-center justify-center gap-2 rounded-none border-2 border-brand-dark bg-transparent px-8 py-4 text-xs font-bold uppercase tracking-[0.2em] text-brand-dark hover:bg-brand-dark hover:text-white transition-all active:translate-y-0.5 font-display"
                   >
                     Notre Engagement Éco
                   </a>
@@ -248,11 +248,11 @@ export default function Hero() {
             <div className="relative mx-auto max-w-md lg:max-w-none w-full">
               
               {/* Back elegant structural card frames */}
-              <div className="absolute inset-0 rounded-[2rem] bg-brand-gold/15 -rotate-2 scale-102 transition-all duration-300" />
-              <div className="absolute inset-0 rounded-[2rem] bg-brand-red/5 rotate-1 scale-101 transition-all duration-300" />
+              <div className="absolute inset-0 rounded-none bg-brand-gold/15 -rotate-2 scale-102 transition-all duration-300 pointer-events-none" />
+              <div className="absolute inset-0 rounded-none bg-brand-red/5 rotate-1 scale-101 transition-all duration-300 pointer-events-none" />
               
               {/* Main Slideshow Frame */}
-              <div className="relative overflow-hidden rounded-[2rem] shadow-2xl border border-white/60 aspect-[4/5] bg-white group">
+              <div className="relative overflow-hidden rounded-none shadow-2xl border border-brand-dark/10 aspect-[4/5] bg-white group">
                 <AnimatePresence initial={false} custom={direction} mode="popLayout">
                   <motion.img
                     key={currentIndex}
@@ -276,9 +276,9 @@ export default function Hero() {
                 <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-brand-dark/80 via-brand-dark/30 to-transparent pointer-events-none z-10" />
 
                 {/* Glassmorphic interactive tags floating on top */}
-                <div className="absolute bottom-5 left-5 right-5 backdrop-blur-md bg-white/85 rounded-xl p-4 border border-white/50 flex items-center justify-between shadow-xl z-20">
+                <div className="absolute bottom-5 left-5 right-5 backdrop-blur-md bg-white/90 rounded-none p-4 border border-brand-dark/10 flex items-center justify-between shadow-xl z-20">
                   <div className="flex items-center gap-3">
-                    <div className="h-10 w-10 overflow-hidden rounded-lg bg-brand-cream shrink-0 border border-brand-red/5">
+                    <div className="h-10 w-10 overflow-hidden rounded-none bg-brand-cream shrink-0 border border-brand-dark/10">
                       <img
                         src={currentSlide.image}
                         alt="Mini item"
@@ -287,10 +287,10 @@ export default function Hero() {
                       />
                     </div>
                     <div>
-                      <h5 className="text-[9px] font-display font-black uppercase tracking-wider text-brand-red leading-none mb-1">
+                      <h5 className="text-[9px] font-display font-black uppercase tracking-[0.15em] text-brand-red leading-none mb-1">
                         PIÈCE MAÎTRESSE ACTUELLE
                       </h5>
-                      <p className="text-sm font-display font-bold text-brand-dark leading-none">
+                      <p className="text-sm font-display font-bold uppercase tracking-wider text-brand-dark leading-none">
                         {currentSlide.tag}
                       </p>
                     </div>
@@ -339,7 +339,7 @@ export default function Hero() {
                     aria-label={`Aller au slide ${idx + 1}`}
                   >
                     {/* Visual bar tracker */}
-                    <div className="h-1.5 w-10 sm:w-14 rounded-full bg-brand-dark/15 overflow-hidden transition-all group-hover:bg-brand-dark/25">
+                    <div className="h-1 w-10 sm:w-14 rounded-none bg-brand-dark/15 overflow-hidden transition-all group-hover:bg-brand-dark/25">
                       {isActive && (
                         <motion.div
                           layoutId="activeSlideIndicator"
@@ -363,32 +363,32 @@ export default function Hero() {
         </div>
 
         {/* Micro Confidence Trust Pillars below the main slider */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 border-t border-brand-dark/5 pt-12 mt-12">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 border-t border-brand-dark/10 pt-12 mt-12">
           <div className="flex items-start gap-4">
-            <div className="p-3 rounded-xl bg-brand-red/5 text-brand-red shrink-0 border border-brand-red/10 shadow-xs">
+            <div className="p-3 rounded-none bg-brand-dark/5 text-brand-dark shrink-0 border border-brand-dark/10 shadow-xs">
               <ShieldCheck className="h-5 w-5" />
             </div>
             <div>
-              <h4 className="text-sm font-bold text-brand-dark font-display uppercase tracking-wider">Coton Organique GOTS</h4>
-              <p className="text-xs text-brand-dark/60 font-sans mt-0.5 leading-relaxed">Haute tenue certifiée, respectueuse des sols et de l'humain.</p>
+              <h4 className="text-sm font-bold text-brand-dark font-display uppercase tracking-widest">Coton Organique GOTS</h4>
+              <p className="text-xs text-brand-dark/60 font-sans mt-1 leading-relaxed">Haute tenue certifiée, respectueuse des sols et de l'humain.</p>
             </div>
           </div>
           <div className="flex items-start gap-4">
-            <div className="p-3 rounded-xl bg-brand-red/5 text-brand-red shrink-0 border border-brand-red/10 shadow-xs">
+            <div className="p-3 rounded-none bg-brand-dark/5 text-brand-dark shrink-0 border border-brand-dark/10 shadow-xs">
               <Heart className="h-5 w-5" />
             </div>
             <div>
-              <h4 className="text-sm font-bold text-brand-dark font-display uppercase tracking-wider">Envoi Climatisé Rapidité d'Élite</h4>
-              <p className="text-xs text-brand-dark/60 font-sans mt-0.5 leading-relaxed">Colisage soigné sous 24/48h dans des tubes en métal collectors.</p>
+              <h4 className="text-sm font-bold text-brand-dark font-display uppercase tracking-widest">Envoi Climatisé Rapidité d'Élite</h4>
+              <p className="text-xs text-brand-dark/60 font-sans mt-1 leading-relaxed">Colisage soigné sous 24/48h dans des tubes en métal collectors.</p>
             </div>
           </div>
           <div className="flex items-start gap-4">
-            <div className="p-3 rounded-xl bg-brand-red/5 text-brand-red shrink-0 border border-brand-red/10 shadow-xs">
+            <div className="p-3 rounded-none bg-brand-dark/5 text-brand-dark shrink-0 border border-brand-dark/10 shadow-xs">
               <Sparkles className="h-5 w-5" />
             </div>
             <div>
-              <h4 className="text-sm font-bold text-brand-dark font-display uppercase tracking-wider">Série Premium Limitée</h4>
-              <p className="text-xs text-brand-dark/60 font-sans mt-0.5 leading-relaxed">Pièces numérotées à 150 exemplaires par modèle. Pas de réassort.</p>
+              <h4 className="text-sm font-bold text-brand-dark font-display uppercase tracking-widest">Série Premium Limitée</h4>
+              <p className="text-xs text-brand-dark/60 font-sans mt-1 leading-relaxed">Pièces numérotées à 150 exemplaires par modèle. Pas de réassort.</p>
             </div>
           </div>
         </div>

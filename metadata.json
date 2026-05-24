@@ -1,6 +1,6 @@
 {
-  "name": "CRISP WEAR - Julio's Store",
-  "description": "Le store de streetwear rétro-futuriste inspiré de l'univers iconique, croustillant et empilable des célèbres tuiles.",
+  "name": "Originel Shop",
+  "description": "Découvrez notre collection haut de gamme d'objets, vêtements et accessoires d'exception : mode rétro-chic, maquillage d'éclat, électroniques ingénieux et électroménager vintage.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

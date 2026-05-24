@@ -14,6 +14,7 @@ export interface Product {
   inStock: boolean;
   isNew?: boolean;
   isRare?: boolean; // Represents hyper-rare drops
+  bgColor?: string; // Custom pastel tile background colors matching the reference image layout
 }
 
 export interface CartItem {

@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 import Toast, { ToastMessage } from './components/Toast';
 import { PRODUCTS, CATEGORIES } from './data';
 import { Product, CartItem } from './types';
-import { SlidersHorizontal, ArrowUpDown, RefreshCcw, Sparkles } from 'lucide-react';
+import { SlidersHorizontal, ArrowUpDown, RefreshCcw, Sparkles, Shirt, Headphones, Coffee, Smile, ShoppingBag } from 'lucide-react';
 
 export default function App() {
   // Navigation & Utility states
@@ -136,42 +136,72 @@ export default function App() {
             
             {/* Section Greeting */}
             <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
-              <span className="text-xs font-bold text-brand-red uppercase tracking-widest block mb-2 font-display">THE SPRING DROP 2026</span>
-              <h2 className="font-display text-3xl sm:text-4xl font-black text-brand-dark">
-                La Collection Streetwear
+              <span className="text-xs font-bold text-brand-red uppercase tracking-widest block mb-1 font-display">SÉLECTION PRINTEMPS 2026</span>
+              <h2 className="font-display text-3xl sm:text-4xl font-black text-brand-dark uppercase tracking-wide">
+                La Collection d'Objets Originels
               </h2>
-              <p className="font-sans text-sm text-brand-dark/70 mt-3 leading-relaxed">
-                Explorez des silhouettes audacieuses taillées dans des grammages d'exception. Des finitions moustaches emblématiques et des accessoires sculpturaux.
+              <p className="font-sans text-xs sm:text-sm text-brand-dark/70 mt-3 leading-relaxed max-w-lg mx-auto">
+                Explorez des articles de sélection d'époque, de technologies de pointe, de textiles raffinés et de maroquinerie d'art. Le tout marié dans de subtils tons pastel.
               </p>
             </div>
 
-            {/* Shop controls: Category Filters + Price Sorting */}
-            <div className="flex flex-col gap-6 bg-brand-cream/70 rounded-2xl p-4 sm:p-6 mb-10 border border-brand-dark/5 shadow-inner">
-              <div className="flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-4">
+            {/* Shop controls: Category Filters + Price Sorting (Originel pastel highlight circles) */}
+            <div className="flex flex-col gap-6 bg-white py-6 mb-12 border-t border-b border-brand-dark/15">
+              <div className="flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-6">
                 
-                {/* Scrollable Category bar capsules */}
-                <div className="flex items-center gap-2 overflow-x-auto pb-2 xl:pb-0 scrollbar-none font-display">
-                  <div className="text-brand-dark/40 p-1.5 shrink-0 hidden sm:block">
-                    <SlidersHorizontal className="h-4 w-4" />
-                  </div>
-                  {CATEGORIES.map((cat) => (
-                    <button
-                      key={cat}
-                      type="button"
-                      onClick={() => setSelectedCategory(cat)}
-                      className={`px-4 py-2 border rounded-full text-xs font-bold transition-all shrink-0 cursor-pointer ${
-                        selectedCategory === cat
-                          ? 'bg-brand-red text-white border-brand-red shadow-md'
-                          : 'bg-white text-brand-dark/80 border-brand-dark/10 hover:border-brand-red hover:bg-brand-cream'
-                      }`}
-                    >
-                      {cat}
-                    </button>
-                  ))}
+                {/* Scrollable Category Circles - Warm, circular highlight style from image */}
+                <div className="flex items-center gap-5 sm:gap-7 overflow-x-auto pb-4 pt-1 xl:pb-0 scrollbar-none justify-start font-display">
+                  {CATEGORIES.map((cat) => {
+                    let IconComponent = Sparkles;
+                    
+                    if (cat === "Tous") {
+                      IconComponent = Sparkles;
+                    } else if (cat === "Vêtements") {
+                      IconComponent = Shirt;
+                    } else if (cat === "Électroniques") {
+                      IconComponent = Headphones;
+                    } else if (cat === "Électroménager") {
+                      IconComponent = Coffee;
+                    } else if (cat === "Maquillage & Beauté") {
+                      IconComponent = Smile;
+                    } else if (cat === "Chaussures & Accessoires") {
+                      IconComponent = ShoppingBag;
+                    }
+
+                    const isSelected = selectedCategory === cat;
+
+                    return (
+                      <button
+                        key={cat}
+                        type="button"
+                        onClick={() => setSelectedCategory(cat)}
+                        className="flex flex-col items-center gap-2 shrink-0 focus:outline-none cursor-pointer group"
+                      >
+                        {/* Circle badge contour */}
+                        <div 
+                          className={`h-14 w-14 sm:h-16 sm:w-16 rounded-full flex items-center justify-center transition-all duration-300 border-2 ${
+                            isSelected 
+                              ? "bg-brand-dark text-white border-brand-dark scale-105 shadow-md" 
+                              : "bg-[#FAFAFA] text-brand-dark/70 border-brand-dark/5 group-hover:border-brand-dark/35 group-hover:bg-neutral-50"
+                          }`}
+                        >
+                          <IconComponent className={`h-5 w-5 sm:h-6 sm:w-6 transition-transform duration-300 ${isSelected ? "scale-110" : "group-hover:rotate-12"}`} />
+                        </div>
+                        {/* Caption */}
+                        <span 
+                          className={`font-display text-[8.5px] sm:text-[9.5px] uppercase tracking-[0.15em] font-extrabold transition-all ${
+                            isSelected ? "text-brand-dark underline underline-offset-4" : "text-brand-dark/50 group-hover:text-brand-dark/80"
+                          }`}
+                        >
+                          {cat}
+                        </span>
+                      </button>
+                    );
+                  })}
                 </div>
 
                 {/* Pricing Sorting Trigger Button */}
-                <div className="flex items-center gap-2 shrink-0 border-t xl:border-t-0 pt-4 xl:pt-0 border-brand-dark/5">
+                <div className="flex items-center gap-2 shrink-0 border-t xl:border-t-0 pt-4 xl:pt-0 border-brand-dark/10">
                   <div className="p-1.5 text-brand-dark/40">
                      <ArrowUpDown className="h-4 w-4" />
                   </div>
@@ -179,33 +209,33 @@ export default function App() {
                     id="price-sort-select"
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value as any)}
-                    className="bg-white border border-brand-dark/10 font-display text-xs font-bold rounded-full px-4 py-2.5 text-brand-dark/80 focus:outline-none focus:ring-1 focus:ring-brand-red cursor-pointer hover:border-brand-red"
+                    className="bg-white border border-brand-dark/20 font-display text-[10px] uppercase tracking-wider font-bold rounded-none px-5 py-3 text-brand-dark focus:outline-none focus:border-brand-dark cursor-pointer"
                     aria-label="Trier les vêtements"
                   >
-                    <option value="default">Filtrer & Trier</option>
-                    <option value="price-asc">Prix : Croissant</option>
-                    <option value="price-desc">Prix : Décroissant</option>
+                    <option value="default">FILTRER & TRIER</option>
+                    <option value="price-asc">PRIX : CROISSANT</option>
+                    <option value="price-desc">PRIX : DÉCROISSANT</option>
                   </select>
                 </div>
               </div>
 
               {/* Status report of current filter params if anything is set */}
               {(selectedCategory !== 'Tous' || searchTerm.trim() !== '' || sortBy !== 'default') && (
-                <div className="flex flex-wrap items-center justify-between gap-3 border-t border-brand-dark/5 pt-4 font-sans">
+                <div className="flex flex-wrap items-center justify-between gap-3 border-t border-brand-dark/10 pt-4 font-sans">
                   <div className="flex flex-wrap gap-2 text-xs text-brand-dark/70 items-center">
-                    <span className="font-semibold">Filtres actifs :</span>
+                    <span className="font-semibold text-[10px] uppercase tracking-wider">Filtres actifs :</span>
                     {selectedCategory !== 'Tous' && (
-                      <span className="bg-brand-red/5 border border-brand-red/10 text-brand-red px-2.5 py-0.5 rounded-full font-bold font-display text-[10px]">
+                      <span className="bg-brand-dark/5 border border-brand-dark/10 text-brand-dark px-3 py-1 rounded-none font-bold font-display text-[10px] uppercase tracking-[0.1em]">
                         {selectedCategory}
                       </span>
                     )}
                     {searchTerm.trim() !== '' && (
-                      <span className="bg-brand-red/5 border border-brand-red/10 text-brand-red px-2.5 py-0.5 rounded-full font-bold font-display text-[10px] italic">
+                      <span className="bg-brand-dark/5 border border-brand-dark/10 text-brand-dark px-3 py-1 rounded-none font-bold font-display text-[10px] italic">
                         "{searchTerm}"
                       </span>
                     )}
                     {sortBy !== 'default' && (
-                      <span className="bg-brand-red/5 border border-brand-red/10 text-brand-red px-2.5 py-0.5 rounded-full font-bold font-display text-[10px]">
+                      <span className="bg-brand-dark/5 border border-brand-dark/10 text-brand-dark px-3 py-1 rounded-none font-bold font-display text-[10px] uppercase tracking-[0.1em]">
                         {sortBy === 'price-asc' ? "Prix croissant" : "Prix décroissant"}
                       </span>
                     )}
@@ -214,10 +244,10 @@ export default function App() {
                   <button
                     id="reset-filters-btn"
                     onClick={handleResetFilters}
-                    className="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-brand-red hover:opacity-85 transition-opacity cursor-pointer font-display"
+                    className="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-brand-red hover:opacity-85 transition-opacity cursor-pointer font-display"
                   >
                     <RefreshCcw className="h-3.5 w-3.5" />
-                    Réinitialiser
+                    RÉINITIALISER
                   </button>
                 </div>
               )}
@@ -225,18 +255,18 @@ export default function App() {
 
             {/* Products Grid Section */}
             {processedProducts.length === 0 ? (
-              <div className="bg-brand-cream rounded-3xl p-12 text-center max-w-sm mx-auto border border-brand-dark/5 shadow-inner flex flex-col items-center justify-center space-y-4 animate-in fade-in duration-300">
-                <div className="h-12 w-12 bg-white text-brand-red rounded-full flex items-center justify-center shadow-xs">
+              <div className="bg-brand-cream rounded-none p-12 text-center max-w-md mx-auto border border-brand-dark/10 shadow-inner flex flex-col items-center justify-center space-y-5 animate-in fade-in duration-300">
+                <div className="h-12 w-12 bg-white text-brand-red rounded-none border border-brand-dark/10 flex items-center justify-center shadow-xs">
                   <RefreshCcw className="h-5 w-5 animate-spin" />
                 </div>
-                <h3 className="font-display text-lg font-black text-brand-dark">Aucune pièce trouvée</h3>
+                <h3 className="font-display text-base font-black uppercase tracking-wider text-brand-dark">Aucune pièce trouvée</h3>
                 <p className="text-xs text-brand-dark/65 font-sans leading-relaxed">
                   Notre garde-robe ne correspond pas aux filtres de recherche actifs. Modifiez vos critères ou réinitialisez le catalogue d'un clic.
                 </p>
                 <button
                   id="empty-state-reset-btn"
                   onClick={handleResetFilters}
-                  className="rounded-full bg-brand-red text-white text-xs font-bold px-5 py-2.5 hover:bg-brand-dark shadow-md transition-all cursor-pointer font-display"
+                  className="rounded-none bg-brand-dark text-white text-[10px] tracking-widest uppercase font-bold px-6 py-3 hover:bg-brand-red transition-all cursor-pointer font-display"
                 >
                   Voir toute la collection
                 </button>

@@ -5,13 +5,13 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Space Grotesk", sans-serif;
   
-  --color-brand-cream: #FCFAF5;
-  --color-brand-gold: #FFC72C;
-  --color-brand-red: #D6232F;
-  --color-brand-green: #007A33;
-  --color-brand-blue: #005691;
-  --color-brand-dark: #120D0A;
-  --color-brand-clay: #E26D5C;
+  --color-brand-cream: #F5EFEB;
+  --color-brand-gold: #C5A880;
+  --color-brand-red: #C55E52;
+  --color-brand-green: #9CB4A1;
+  --color-brand-blue: #708493;
+  --color-brand-dark: #1F2229;
+  --color-brand-clay: #2E333F;
 }
 
 @layer base {
